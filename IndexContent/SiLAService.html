@@ -1,0 +1,408 @@
+---
+layout: default
+title: SiLAService
+---
+
+<!DOCTYPE html>
+
+<html>
+	<body>
+	  <div class="file-heading">
+        <h2 id="SiLAService.proto">SiLAService.proto</h2><a href="/tableofcontent">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.GetFeatureDefinition_Parameters">GetFeatureDefinition_Parameters</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>FeatureIdentifier</td>
+                  <td><a href="#sila2.org.silastandard.String">sila2.org.silastandard.String</a></td>
+                  <td></td>
+                  <td><p>The fully qualified Feature identifier for which the Feature definition shall be retrieved. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.GetFeatureDefinition_Responses">GetFeatureDefinition_Responses</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>FeatureDefinition</td>
+                  <td><a href="#sila2.org.silastandard.String">sila2.org.silastandard.String</a></td>
+                  <td></td>
+                  <td><p>The Feature definition in XML format (according to the Feature Definition Schema). </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.Get_ImplementedFeatures_Parameters">Get_ImplementedFeatures_Parameters</h3>
+        <p>Parameters for ImplementedFeatures</p>
+
+        
+
+        
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.Get_ImplementedFeatures_Responses">Get_ImplementedFeatures_Responses</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ImplementedFeatures</td>
+                  <td><a href="#sila2.org.silastandard.String">sila2.org.silastandard.String</a></td>
+                  <td>repeated</td>
+                  <td><p>Returns a list of fully qualified Feature identifiers of all implemented Features of this SiLA Server.
+This list SHOULD remain the same throughout the lifetime of the SiLA Server. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.Get_ServerDescription_Parameters">Get_ServerDescription_Parameters</h3>
+        <p>Parameters for ServerDescription</p>
+
+        
+
+        
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.Get_ServerDescription_Responses">Get_ServerDescription_Responses</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ServerDescription</td>
+                  <td><a href="#sila2.org.silastandard.String">sila2.org.silastandard.String</a></td>
+                  <td></td>
+                  <td><p>Description of the SiLA Server. This should include the use and purpose of this SiLA Server. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.Get_ServerName_Parameters">Get_ServerName_Parameters</h3>
+        <p>Parameters for ServerName</p>
+
+        
+
+        
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.Get_ServerName_Responses">Get_ServerName_Responses</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ServerName</td>
+                  <td><a href="#sila2.org.silastandard.String">sila2.org.silastandard.String</a></td>
+                  <td></td>
+                  <td><p>Human readable name of the SiLA Server. The name can be set using the &#39;Set Server Name&#39; command. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.Get_ServerType_Parameters">Get_ServerType_Parameters</h3>
+        <p>Parameters for ServerType</p>
+
+        
+
+        
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.Get_ServerType_Responses">Get_ServerType_Responses</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ServerType</td>
+                  <td><a href="#sila2.org.silastandard.String">sila2.org.silastandard.String</a></td>
+                  <td></td>
+                  <td><p>The type of this server. It, could be, e.g., in the case of a SiLA Device the model name.
+It is specified by the implementer of the SiLA Server and MAY not be unique. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.Get_ServerUUID_Parameters">Get_ServerUUID_Parameters</h3>
+        <p>Parameters for ServerUUID</p>
+
+        
+
+        
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.Get_ServerUUID_Responses">Get_ServerUUID_Responses</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ServerUUID</td>
+                  <td><a href="#sila2.org.silastandard.String">sila2.org.silastandard.String</a></td>
+                  <td></td>
+                  <td><p>Globally unique identifier that identifies a SiLA Server. The Server UUID MUST be generated once
+and remain the same for all times. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.Get_ServerVendorURL_Parameters">Get_ServerVendorURL_Parameters</h3>
+        <p>Parameters for ServerVendorURL</p>
+
+        
+
+        
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.Get_ServerVendorURL_Responses">Get_ServerVendorURL_Responses</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ServerVendorURL</td>
+                  <td><a href="#sila2.org.silastandard.String">sila2.org.silastandard.String</a></td>
+                  <td></td>
+                  <td><p>Returns the URL to the website of the vendor or the website of the product of this SiLA Server.
+This URL SHOULD be accessible at all times.
+The URL is a Uniform Resource Locator as defined in RFC 1738. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.Get_ServerVersion_Parameters">Get_ServerVersion_Parameters</h3>
+        <p>Parameters for ServerVersion</p>
+
+        
+
+        
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.Get_ServerVersion_Responses">Get_ServerVersion_Responses</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ServerVersion</td>
+                  <td><a href="#sila2.org.silastandard.String">sila2.org.silastandard.String</a></td>
+                  <td></td>
+                  <td><p>Returns the version of the SiLA Server. A &#34;Major&#34; and a &#34;Minor&#34; version number (e.g. 1.0) MUST be provided,
+a Patch version number MAY be provided. Optionally, an arbitrary text, separated by an underscore MAY be
+appended, e.g. “3.19.373_mighty_lab_devices”. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.SetServerName_Parameters">SetServerName_Parameters</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ServerName</td>
+                  <td><a href="#sila2.org.silastandard.String">sila2.org.silastandard.String</a></td>
+                  <td></td>
+                  <td><p>The human readable name to assign to the SiLA Server. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.SetServerName_Responses">SetServerName_Responses</h3>
+        <p></p>
+
+        
+
+        
+      
+
+      
+
+      
+
+      
+        <h3 id="sila2.org.silastandard.core.silaservice.v1.SiLAService">SiLAService</h3>
+        <p>This Feature MUST be implemented by each SiLA Server.</p><p>It specifies Commands and Properties to discover the Features a SiLA Server implements as well as details</p><p>about the SiLA Server, like name, type, description, vendor and UUID.</p><p>Any interaction described in this feature MUST not affect the behaviour of any other Feature.</p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>GetFeatureDefinition</td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.GetFeatureDefinition_Parameters">GetFeatureDefinition_Parameters</a></td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.GetFeatureDefinition_Responses">GetFeatureDefinition_Responses</a></td>
+                <td><p>Get the Feature Definition of an implemented Feature by its fully qualified Feature Identifier.
+This command has no preconditions and no further dependencies and can be called at any time.</p></td>
+              </tr>
+            
+              <tr>
+                <td>SetServerName</td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.SetServerName_Parameters">SetServerName_Parameters</a></td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.SetServerName_Responses">SetServerName_Responses</a></td>
+                <td><p>Sets a human readable name to the Server Name Property.Command has no preconditions and
+no further dependencies and can be called at any time.</p></td>
+              </tr>
+            
+              <tr>
+                <td>Get_ServerName</td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.Get_ServerName_Parameters">Get_ServerName_Parameters</a></td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.Get_ServerName_Responses">Get_ServerName_Responses</a></td>
+                <td><p>Human readable name of the SiLA Server. The name can be set using the &#39;Set Server Name&#39; command.</p></td>
+              </tr>
+            
+              <tr>
+                <td>Get_ServerType</td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.Get_ServerType_Parameters">Get_ServerType_Parameters</a></td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.Get_ServerType_Responses">Get_ServerType_Responses</a></td>
+                <td><p>The type of this server. It, could be, e.g., in the case of a SiLA Device the model name.
+It is specified by the implementer of the SiLA Server and MAY not be unique.</p></td>
+              </tr>
+            
+              <tr>
+                <td>Get_ServerUUID</td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.Get_ServerUUID_Parameters">Get_ServerUUID_Parameters</a></td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.Get_ServerUUID_Responses">Get_ServerUUID_Responses</a></td>
+                <td><p>Globally unique identifier that identifies a SiLA Server. The Server UUID MUST be generated once
+and remain the same for all times.</p></td>
+              </tr>
+            
+              <tr>
+                <td>Get_ServerDescription</td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.Get_ServerDescription_Parameters">Get_ServerDescription_Parameters</a></td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.Get_ServerDescription_Responses">Get_ServerDescription_Responses</a></td>
+                <td><p>Description of the SiLA Server. This should include the use and purpose of this SiLA Server.</p></td>
+              </tr>
+            
+              <tr>
+                <td>Get_ServerVersion</td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.Get_ServerVersion_Parameters">Get_ServerVersion_Parameters</a></td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.Get_ServerVersion_Responses">Get_ServerVersion_Responses</a></td>
+                <td><p>Returns the version of the SiLA Server. A &#34;Major&#34; and a &#34;Minor&#34; version number (e.g. 1.0) MUST be provided,
+a Patch version number MAY be provided. Optionally, an arbitrary text, separated by an underscore MAY be
+appended, e.g. “3.19.373_mighty_lab_devices”.</p></td>
+              </tr>
+            
+              <tr>
+                <td>Get_ServerVendorURL</td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.Get_ServerVendorURL_Parameters">Get_ServerVendorURL_Parameters</a></td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.Get_ServerVendorURL_Responses">Get_ServerVendorURL_Responses</a></td>
+                <td><p>Returns the URL to the website of the vendor or the website of the product of this SiLA Server.
+This URL SHOULD be accessible at all times.
+The URL is a Uniform Resource Locator as defined in RFC 1738.</p></td>
+              </tr>
+            
+              <tr>
+                <td>Get_ImplementedFeatures</td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.Get_ImplementedFeatures_Parameters">Get_ImplementedFeatures_Parameters</a></td>
+                <td><a href="#sila2.org.silastandard.core.silaservice.v1.Get_ImplementedFeatures_Responses">Get_ImplementedFeatures_Responses</a></td>
+                <td><p>Returns a list of fully qualified Feature identifiers of all implemented Features of this SiLA Server.
+This list SHOULD remain the same throughout the lifetime of the SiLA Server.</p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+	</body>
+</html>

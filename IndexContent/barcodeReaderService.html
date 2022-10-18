@@ -1,0 +1,141 @@
+---
+layout: default
+title: BarcodeReaderService
+---
+
+<!DOCTYPE html>
+
+<html>
+	<body>
+	  <div class="file-heading">
+        <h2 id="BarcodeReaderService.proto">BarcodeReaderService.proto</h2><a href="/tableofcontent">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="sila2.dx.idot.sila.dispensing.barcodereaderservice.v1.Get_BarcodeReaderAvailability_Parameters">Get_BarcodeReaderAvailability_Parameters</h3>
+        <p>Parameters for BarcodeReaderAvailability</p>
+
+        
+
+        
+      
+        <h3 id="sila2.dx.idot.sila.dispensing.barcodereaderservice.v1.Get_BarcodeReaderAvailability_Responses">Get_BarcodeReaderAvailability_Responses</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>BarcodeReaderAvailability</td>
+                  <td><a href="#sila2.org.silastandard.Boolean">sila2.org.silastandard.Boolean</a></td>
+                  <td></td>
+                  <td><p>Query whether the barcode reader is available or not. This property reflects the state of the &#34;UseBarcodeReader&#34; property in the I.DOT Assay Studio configuration file. This property can be changed in the general settings of I.DOT Assay Studio and requires the barcode reader component to be installed in the device to be set to TRUE. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="sila2.dx.idot.sila.dispensing.barcodereaderservice.v1.ReadBarcodeOnPlate_Parameters">ReadBarcodeOnPlate_Parameters</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>PlateTray</td>
+                  <td><a href="#sila2.org.silastandard.String">sila2.org.silastandard.String</a></td>
+                  <td></td>
+                  <td><p>Tray in which the plate to be read is located, either &#34;Target&#34; or &#34;Source&#34;. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="sila2.dx.idot.sila.dispensing.barcodereaderservice.v1.ReadBarcodeOnPlate_Responses">ReadBarcodeOnPlate_Responses</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>Barcode</td>
+                  <td><a href="#sila2.org.silastandard.String">sila2.org.silastandard.String</a></td>
+                  <td></td>
+                  <td><p>Barcode read by the barcode reader. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+
+      
+
+      
+
+      
+        <h3 id="sila2.dx.idot.sila.dispensing.barcodereaderservice.v1.BarcodeReaderService">BarcodeReaderService</h3>
+        <p>Service to read a barcode from a SBS format plate that has been placed in either the source tray or the target tray.</p><p>Reading barcodes with this feature is possible only if the I.DOT is equipped with a barcode reader. This can be checked via the property Barcode Reader Availability.</p><p>To sucessfully read a barcode, it must be positioned correctly on the plate, and the plate must be oriented in the tray so that the barcode is facing the barcode reader.</p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>ReadBarcodeOnPlate</td>
+                <td><a href="#sila2.dx.idot.sila.dispensing.barcodereaderservice.v1.ReadBarcodeOnPlate_Parameters">ReadBarcodeOnPlate_Parameters</a></td>
+                <td><a href="#sila2.org.silastandard.CommandConfirmation">.sila2.org.silastandard.CommandConfirmation</a></td>
+                <td><p>Read the source or target plate barcode. To use this feature, make sure the I.DOT instrument has the barcode reader component installed.</p></td>
+              </tr>
+            
+              <tr>
+                <td>ReadBarcodeOnPlate_Info</td>
+                <td><a href="#sila2.org.silastandard.CommandExecutionUUID">.sila2.org.silastandard.CommandExecutionUUID</a></td>
+                <td><a href="#sila2.org.silastandard.ExecutionInfo">.sila2.org.silastandard.ExecutionInfo</a> stream</td>
+                <td><p>Monitor the state of ReadBarcodeOnPlate</p></td>
+              </tr>
+            
+              <tr>
+                <td>ReadBarcodeOnPlate_Result</td>
+                <td><a href="#sila2.org.silastandard.CommandExecutionUUID">.sila2.org.silastandard.CommandExecutionUUID</a></td>
+                <td><a href="#sila2.dx.idot.sila.dispensing.barcodereaderservice.v1.ReadBarcodeOnPlate_Responses">ReadBarcodeOnPlate_Responses</a></td>
+                <td><p>Retrieve result of ReadBarcodeOnPlate</p></td>
+              </tr>
+            
+              <tr>
+                <td>Get_BarcodeReaderAvailability</td>
+                <td><a href="#sila2.dx.idot.sila.dispensing.barcodereaderservice.v1.Get_BarcodeReaderAvailability_Parameters">Get_BarcodeReaderAvailability_Parameters</a></td>
+                <td><a href="#sila2.dx.idot.sila.dispensing.barcodereaderservice.v1.Get_BarcodeReaderAvailability_Responses">Get_BarcodeReaderAvailability_Responses</a></td>
+                <td><p>Query whether the barcode reader is available or not. This property reflects the state of the &#34;UseBarcodeReader&#34; property in the I.DOT Assay Studio configuration file. This property can be changed in the general settings of I.DOT Assay Studio and requires the barcode reader component to be installed in the device to be set to TRUE.</p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+		
+	</body>
+</html>

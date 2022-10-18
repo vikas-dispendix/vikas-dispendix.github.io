@@ -1,0 +1,121 @@
+---
+layout: default
+title: InitializationController
+---
+
+<!DOCTYPE html>
+
+<html>
+	<body>
+	  <div class="file-heading">
+        <h2 id="InitializationController.proto">InitializationController.proto</h2><a href="/tableofcontent">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="sila2.dx.idot.sila.dispensing.initializationcontroller.v1.Initialize_Parameters">Initialize_Parameters</h3>
+        <p></p>
+
+        
+
+        
+      
+        <h3 id="sila2.dx.idot.sila.dispensing.initializationcontroller.v1.Initialize_Responses">Initialize_Responses</h3>
+        <p></p>
+
+        
+
+        
+      
+        <h3 id="sila2.dx.idot.sila.dispensing.initializationcontroller.v1.Reset_Parameters">Reset_Parameters</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>SimulationMode</td>
+                  <td><a href="#sila2.org.silastandard.Boolean">sila2.org.silastandard.Boolean</a></td>
+                  <td></td>
+                  <td><p>State of the I.DOT. True means running I.DOT in simulation mode and false means running the I.DOT with hardware connectivity </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="sila2.dx.idot.sila.dispensing.initializationcontroller.v1.Reset_Responses">Reset_Responses</h3>
+        <p></p>
+
+        
+
+        
+      
+
+      
+
+      
+
+      
+        <h3 id="sila2.dx.idot.sila.dispensing.initializationcontroller.v1.InitializationController">InitializationController</h3>
+        <p>Controller to reset and initialize the I.DOT. Upon startup of the device, the I.DOT needs to be reset and then initialized. This procedure can also be used to recover from an error state that is not solvable otherwise.</p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>Reset</td>
+                <td><a href="#sila2.dx.idot.sila.dispensing.initializationcontroller.v1.Reset_Parameters">Reset_Parameters</a></td>
+                <td><a href="#sila2.org.silastandard.CommandConfirmation">.sila2.org.silastandard.CommandConfirmation</a></td>
+                <td><p>Reset the I.DOT. Sending this command is required right after the connection to the SiLA 2 Server is established. Through the flag SimulationMode the device software can either connect to and control the hardware (SimulationMode=False, called &#34;DeviceMode&#34; in the UI) or simulate the hardware (SimulationMode=True, called &#34;DesktopMode&#34; in the UI). We do not recomment to reset the device durring the execution of another command.</p></td>
+              </tr>
+            
+              <tr>
+                <td>Reset_Info</td>
+                <td><a href="#sila2.org.silastandard.CommandExecutionUUID">.sila2.org.silastandard.CommandExecutionUUID</a></td>
+                <td><a href="#sila2.org.silastandard.ExecutionInfo">.sila2.org.silastandard.ExecutionInfo</a> stream</td>
+                <td><p>Monitor the state of Reset</p></td>
+              </tr>
+            
+              <tr>
+                <td>Reset_Result</td>
+                <td><a href="#sila2.org.silastandard.CommandExecutionUUID">.sila2.org.silastandard.CommandExecutionUUID</a></td>
+                <td><a href="#sila2.dx.idot.sila.dispensing.initializationcontroller.v1.Reset_Responses">Reset_Responses</a></td>
+                <td><p>Retrieve result of Reset</p></td>
+              </tr>
+            
+              <tr>
+                <td>Initialize</td>
+                <td><a href="#sila2.dx.idot.sila.dispensing.initializationcontroller.v1.Initialize_Parameters">Initialize_Parameters</a></td>
+                <td><a href="#sila2.org.silastandard.CommandConfirmation">.sila2.org.silastandard.CommandConfirmation</a></td>
+                <td><p>initialize I.DOT instrument.</p></td>
+              </tr>
+            
+              <tr>
+                <td>Initialize_Info</td>
+                <td><a href="#sila2.org.silastandard.CommandExecutionUUID">.sila2.org.silastandard.CommandExecutionUUID</a></td>
+                <td><a href="#sila2.org.silastandard.ExecutionInfo">.sila2.org.silastandard.ExecutionInfo</a> stream</td>
+                <td><p>Monitor the state of Initialize</p></td>
+              </tr>
+            
+              <tr>
+                <td>Initialize_Result</td>
+                <td><a href="#sila2.org.silastandard.CommandExecutionUUID">.sila2.org.silastandard.CommandExecutionUUID</a></td>
+                <td><a href="#sila2.dx.idot.sila.dispensing.initializationcontroller.v1.Initialize_Responses">Initialize_Responses</a></td>
+                <td><p>Retrieve result of Initialize</p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+		
+	</body>
+</html>

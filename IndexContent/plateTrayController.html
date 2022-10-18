@@ -1,0 +1,144 @@
+---
+layout: default
+title: PlateTrayController
+---
+
+<!DOCTYPE html>
+
+<html>
+	<body>
+	  <div class="file-heading">
+        <h2 id="PlateTrayController.proto">PlateTrayController.proto</h2><a href="/tableofcontent">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="sila2.dx.idot.sila.dispensing.platetraycontroller.v1.DataType_TrayType">DataType_TrayType</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>TrayType</td>
+                  <td><a href="#sila2.org.silastandard.String">sila2.org.silastandard.String</a></td>
+                  <td></td>
+                  <td><p>Type of the carrier, either target or source. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="sila2.dx.idot.sila.dispensing.platetraycontroller.v1.EjectTray_Parameters">EjectTray_Parameters</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>PlateTray</td>
+                  <td><a href="#sila2.dx.idot.sila.dispensing.platetraycontroller.v1.DataType_TrayType">DataType_TrayType</a></td>
+                  <td></td>
+                  <td><p>Type of tray, either &#34;Target&#34; or &#34;Source&#34;. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="sila2.dx.idot.sila.dispensing.platetraycontroller.v1.EjectTray_Responses">EjectTray_Responses</h3>
+        <p></p>
+
+        
+
+        
+      
+        <h3 id="sila2.dx.idot.sila.dispensing.platetraycontroller.v1.RetractTray_Parameters">RetractTray_Parameters</h3>
+        <p></p>
+
+        
+
+        
+      
+        <h3 id="sila2.dx.idot.sila.dispensing.platetraycontroller.v1.RetractTray_Responses">RetractTray_Responses</h3>
+        <p></p>
+
+        
+
+        
+      
+
+      
+
+      
+
+      
+        <h3 id="sila2.dx.idot.sila.dispensing.platetraycontroller.v1.PlateTrayController">PlateTrayController</h3>
+        <p>Controller to eject and retract both the source and target tray. This service is needed to input the respective target and source plates before dispensing. Please note that canceling a command of this controller in the middle of execution can cause the carrier to half eject or half retract. The Dispense Service Feature requires all trays to be fully retracted to avoid any harm to the I.DOT.</p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>EjectTray</td>
+                <td><a href="#sila2.dx.idot.sila.dispensing.platetraycontroller.v1.EjectTray_Parameters">EjectTray_Parameters</a></td>
+                <td><a href="#sila2.org.silastandard.CommandConfirmation">.sila2.org.silastandard.CommandConfirmation</a></td>
+                <td><p>Eject the I.DOT&#39;s source plate tray or target plate tray.</p></td>
+              </tr>
+            
+              <tr>
+                <td>EjectTray_Info</td>
+                <td><a href="#sila2.org.silastandard.CommandExecutionUUID">.sila2.org.silastandard.CommandExecutionUUID</a></td>
+                <td><a href="#sila2.org.silastandard.ExecutionInfo">.sila2.org.silastandard.ExecutionInfo</a> stream</td>
+                <td><p>Monitor the state of EjectTray</p></td>
+              </tr>
+            
+              <tr>
+                <td>EjectTray_Result</td>
+                <td><a href="#sila2.org.silastandard.CommandExecutionUUID">.sila2.org.silastandard.CommandExecutionUUID</a></td>
+                <td><a href="#sila2.dx.idot.sila.dispensing.platetraycontroller.v1.EjectTray_Responses">EjectTray_Responses</a></td>
+                <td><p>Retrieve result of EjectTray</p></td>
+              </tr>
+            
+              <tr>
+                <td>RetractTray</td>
+                <td><a href="#sila2.dx.idot.sila.dispensing.platetraycontroller.v1.RetractTray_Parameters">RetractTray_Parameters</a></td>
+                <td><a href="#sila2.org.silastandard.CommandConfirmation">.sila2.org.silastandard.CommandConfirmation</a></td>
+                <td><p>Retracts both source and target plate tray.</p></td>
+              </tr>
+            
+              <tr>
+                <td>RetractTray_Info</td>
+                <td><a href="#sila2.org.silastandard.CommandExecutionUUID">.sila2.org.silastandard.CommandExecutionUUID</a></td>
+                <td><a href="#sila2.org.silastandard.ExecutionInfo">.sila2.org.silastandard.ExecutionInfo</a> stream</td>
+                <td><p>Monitor the state of RetractTray</p></td>
+              </tr>
+            
+              <tr>
+                <td>RetractTray_Result</td>
+                <td><a href="#sila2.org.silastandard.CommandExecutionUUID">.sila2.org.silastandard.CommandExecutionUUID</a></td>
+                <td><a href="#sila2.dx.idot.sila.dispensing.platetraycontroller.v1.RetractTray_Responses">RetractTray_Responses</a></td>
+                <td><p>Retrieve result of RetractTray</p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+	</body>
+</html>
