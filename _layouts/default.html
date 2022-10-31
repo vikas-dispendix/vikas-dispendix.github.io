@@ -160,12 +160,22 @@
     </style>
 
     
-    <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css"/>
 	</head>
 	
+	<!-- {% include head.html %} -->
+	
   <body>
+	{% include header.html %}
 	{% include navigation.html %}
-    {{ content }}
+	
+	<!-- <main class="page-content" aria-label="Content"> -->
+		<!-- <div class="wrapper"> -->
+	{{ content }}
+		<!-- </div> -->
+	<!-- </main> -->
+	
+	{% include footer.html %}
   </body>
 </html>
 
